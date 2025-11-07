@@ -19,14 +19,29 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: auto 400px 1fr auto;
+    max-width: 2000px;
+  }
+
+  section#ficha {
+    height: fit-content;
+    grid-column: 2/3;
+    position: sticky;
+    top: 65px;
+  }
+
+  section#detalhes {
+    grid-column: 3/-1;
+  }
   #projeto-container a {
     max-width: none;
   }
 
   #projeto-container .foto {
     min-width: 200px;
-    transition: min-width .2s;
+    transition: min-width 0.2s;
   }
 }
 
