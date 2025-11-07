@@ -22,7 +22,7 @@
 @media screen and (min-width: 1000px) {
   main {
     grid-template-columns: auto 400px 1fr auto;
-    max-width: 2000px;
+    max-width: 1700px;
   }
 
   section#ficha {
@@ -43,6 +43,13 @@
     min-width: 200px;
     transition: min-width 0.2s;
   }
+}
+
+@media screen and (min-width: 1700px) {
+    main {
+        grid-template-columns: 400px 400px auto auto;
+        min-width: min(85vw, 1700pcx);
+    }
 }
 
 @media screen and (max-width: 767.1px) {
