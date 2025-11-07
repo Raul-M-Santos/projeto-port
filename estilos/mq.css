@@ -21,7 +21,7 @@
 
 @media screen and (min-width: 1000px) {
   main {
-    grid-template-columns: auto 400px 1fr auto;
+    grid-template-columns: 1fr 300px auto auto;
     max-width: 1700px;
   }
 
@@ -45,10 +45,10 @@
   }
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 2000px) {
     main {
-        grid-template-columns: 400px 400px auto auto;
-        min-width: min(85vw, 1700pcx);
+        grid-template-columns:  1fr 400px 1fr 1fr;
+        min-width: min(90vw, 1700px);
     }
 }
 
