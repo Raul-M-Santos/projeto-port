@@ -29,6 +29,9 @@ header {
   display: flex;
   justify-content: end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 nav#menu ul {
   list-style: none;
@@ -52,7 +55,7 @@ nav#menu a {
 
 main {
   display: grid;
-  grid-template-columns: auto 90vw auto;
+  grid-template-columns: 1fr minmax(auto, 1500px) 1fr;
   gap: 20px;
   margin-top: 20px;
 }
@@ -216,6 +219,7 @@ article h2 {
   border-radius: 8px;
   border-left: 4px solid var(--destaque-inverso);
   transition: border-width 0.1s, border-color 0.4s;
+  overflow: hidden;
 }
 
 #projeto-container .projeto:hover {
@@ -234,6 +238,12 @@ article h2 {
   object-fit: cover;
   overflow: hidden;
   border-radius: 8px;
+  min-width: 100px;
+  transition: min-width .3s;
+}
+
+#projeto-container a {
+  max-width: 100px;
 }
 
 footer {
@@ -251,25 +261,4 @@ footer a {
 
 footer a:hover {
   color: var(--texto-inverso);
-}
-
-@media screen and (min-width: 768px) {
-  #skill-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #projeto-container .projeto {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  #projeto-container .projeto-info {
-    max-width: 80%;
-  }
-
-  #projeto-container .foto {
-    aspect-ratio: 1/1;
-    max-width: 20%;
-    max-height: 200px;
-  }
 }
