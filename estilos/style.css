@@ -228,6 +228,11 @@ article h2 {
   border-width: 7px;
 }
 
+#projeto-container a {
+  text-decoration: none;
+  color: var(--texto);
+}
+
 #projeto-container summary:hover {
   color: var(--destaque);
 }
